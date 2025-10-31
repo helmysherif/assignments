@@ -1,0 +1,107 @@
+Elalameya@DESKTOP-24QNVRU MINGW64 /f/courses/devOps/assignments
+$ git init
+Initialized empty Git repository in F:/courses/devOps/assignments/.git/
+
+Elalameya@DESKTOP-24QNVRU MINGW64 /f/courses/devOps/assignments (master)
+$ git add README.md
+fatal: pathspec 'README.md' did not match any files
+
+Elalameya@DESKTOP-24QNVRU MINGW64 /f/courses/devOps/assignments (master)
+$ echo "# My assignments repo" > README.md
+
+Elalameya@DESKTOP-24QNVRU MINGW64 /f/courses/devOps/assignments (master)
+$ git commit -m "add the database assignment file"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+        day4/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Elalameya@DESKTOP-24QNVRU MINGW64 /f/courses/devOps/assignments (master)
+$ git add *
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+Elalameya@DESKTOP-24QNVRU MINGW64 /f/courses/devOps/assignments (master)
+$ git commit -m "add the database assignment file"
+[master (root-commit) 07c5834] add the database assignment file
+ 2 files changed, 1 insertion(+)
+ create mode 100644 README.md
+ create mode 100644 day4/Day1_1 MySQL Assignment .docx
+
+Elalameya@DESKTOP-24QNVRU MINGW64 /f/courses/devOps/assignments (master)
+$ git branch -M main
+
+Elalameya@DESKTOP-24QNVRU MINGW64 /f/courses/devOps/assignments (main)
+$ git remote add origin https://github.com/helmysherif/assignments.git
+
+Elalameya@DESKTOP-24QNVRU MINGW64 /f/courses/devOps/assignments (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 558.83 KiB | 21.49 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/helmysherif/assignments.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+Elalameya@DESKTOP-24QNVRU MINGW64 /f/courses/devOps/assignments (main)
+$ git checkout -b feature-branch
+Switched to a new branch 'feature-branch'
+
+Elalameya@DESKTOP-24QNVRU MINGW64 /f/courses/devOps/assignments (feature-branch)
+$ git add *
+
+Elalameya@DESKTOP-24QNVRU MINGW64 /f/courses/devOps/assignments (feature-branch)
+$ echo "This is a feature branch" > feature.txt
+
+Elalameya@DESKTOP-24QNVRU MINGW64 /f/courses/devOps/assignments (feature-branch)
+$ git add *
+warning: in the working copy of 'feature.txt', LF will be replaced by CRLF the next time Git touches it
+
+Elalameya@DESKTOP-24QNVRU MINGW64 /f/courses/devOps/assignments (feature-branch)
+$ git commit -m "add feature branch"
+[feature-branch 5f89a8d] add feature branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+
+Elalameya@DESKTOP-24QNVRU MINGW64 /f/courses/devOps/assignments (feature-branch)
+$ git push
+fatal: The current branch feature-branch has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin feature-branch
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Elalameya@DESKTOP-24QNVRU MINGW64 /f/courses/devOps/assignments (feature-branch)
+$ ^C
+
+Elalameya@DESKTOP-24QNVRU MINGW64 /f/courses/devOps/assignments (feature-branch)
+$  git push --set-upstream origin feature-branch
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 338 bytes | 338.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'feature-branch' on GitHub by visiting:
+remote:      https://github.com/helmysherif/assignments/pull/new/feature-branch
+remote:
+To https://github.com/helmysherif/assignments.git
+ * [new branch]      feature-branch -> feature-branch
+branch 'feature-branch' set up to track 'origin/feature-branch'.
+
+Elalameya@DESKTOP-24QNVRU MINGW64 /f/courses/devOps/assignments (feature-branch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
